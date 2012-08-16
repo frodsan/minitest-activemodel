@@ -17,4 +17,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency 'minitest', '~> 3.3.0'
+  gem.add_development_dependency 'minitest-sugar'
 end
