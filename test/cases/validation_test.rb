@@ -2,7 +2,13 @@ require 'test_helper'
 
 class ValidationMatcherTest < MiniTest::Unit::TestCase
   def setup
-    @validator ||= ValidationMatcher.new :field, :type
+    @validator = ValidationMatcher.new :field, :type
+  end
+
+  test 'returns false if validation type not exists' do
+    subject = create_subject :field, :another_type
+
+    assert !@validator.matches?(subject)
   end
 
   test 'returns true if validation type exists' do
@@ -11,10 +17,20 @@ class ValidationMatcherTest < MiniTest::Unit::TestCase
     assert @validator.matches? subject
   end
 
-  test 'returns false if validation type not exists' do
+  test 'set failure message if validation type not exists' do
     subject = create_subject :field, :another_type
 
-    assert !@validator.matches?(subject)
+    @validator.matches? subject
+
+    assert_match 'no type validator for field', @validator.failure_message
+  end
+
+  test 'set negative failure message if validation type exists' do
+    subject = create_subject :field, :type
+
+    @validator.matches? subject
+
+    assert_match 'type validator for field', @validator.negative_failure_message
   end
 
   private
