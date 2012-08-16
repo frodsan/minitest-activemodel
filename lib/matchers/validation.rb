@@ -22,7 +22,7 @@ module MiniTest
         end
 
         def negative_failure_message
-          "Expected #{@klass} to #{description}; instead got #{@positive_message}"
+          "Expected #{@klass} to not #{description}; instead got #{@positive_message}"
         end
 
         private

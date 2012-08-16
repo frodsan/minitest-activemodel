@@ -33,11 +33,6 @@ class ValidationMatcherTest < MiniTest::Unit::TestCase
     assert_match 'type validator for field', @validator.negative_failure_message
   end
 
-  test 'shit' do
-    subject = create_subject :field, :type
-    assert_must @validator, subject
-  end
-
   private
 
   def create_subject field, type
