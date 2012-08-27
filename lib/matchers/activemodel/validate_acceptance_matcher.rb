@@ -28,7 +28,7 @@ module MiniTest
 
         def description
           desc = ''
-          desc = " accept with #{@accepted}" if @accepted
+          desc = " accept with #{@accepted.inspect}" if @accepted
           super << desc
         end
 
@@ -38,9 +38,9 @@ module MiniTest
           actual = @validator.options[:accept]
 
           if actual == @accepted
-            @positive_message << " accept with #{actual}"
+            @positive_message << " accept with #{actual.inspect}"
           else
-            @negative_message << " accept with #{actual}"
+            @negative_message << " accept with #{actual.inspect}"
             @result = false
           end
         end
