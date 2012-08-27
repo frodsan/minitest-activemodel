@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.files         = Dir.glob('{lib}/**/*') + %w(LICENSE README.md CHANGELOG.md)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename f  }
   gem.test_files    = gem.files.grep(%r{^(test)/})
-  gem.require_paths = ["lib"]
+  gem.require_paths = ['lib']
 
   gem.add_dependency 'minitest', '~> 3.3.0'
   gem.add_dependency 'minitest-matchers', '~> 1.2.0'
