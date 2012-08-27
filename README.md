@@ -8,7 +8,7 @@ MiniTest matchers for ActiveModel::Validations.
 
 Add this line to your application's Gemfile:
 
-    gem 'minitest-activemodel'
+    gem 'minitest-activemodel', group: :test
 
 And then execute:
 
