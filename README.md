@@ -2,6 +2,8 @@
 
 MiniTest matchers for ActiveModel::Validations.
 
+[![Build Status](https://secure.travis-ci.org/frodsan/minitest-activemodel.png?branch=master&.png)](http://travis-ci.org/frodsan/minitest-activemodel)
+
 ## Installation
 
 Add this line to your application's Gemfile:
