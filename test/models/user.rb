@@ -7,4 +7,6 @@ class User
 
   validates_acceptance_of :eula
   validates_acceptance_of :terms_of_service, accept: true
+
+  validates_confirmation_of :password
 end
