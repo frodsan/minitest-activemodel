@@ -1,6 +1,6 @@
-# Minitest::Activemodel
+# minitest-activemodel
 
-TODO: Write a gem description
+MiniTest matchers for ActiveModel::Validations.
 
 ## Installation
 
