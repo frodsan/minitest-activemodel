@@ -25,11 +25,11 @@ module MiniTest
           "Expected #{@klass} to not #{description}; instead got #{@positive_message}"
         end
 
-        private
-
         def description
           "validate #{@type} of #{@attr}"
         end
+
+        private
 
         def check_validator
           if @validator
