@@ -34,6 +34,7 @@ module MiniTest
         def check_validator
           if @validator
             @positive_message = "#{@type} validator for #{@attr}"
+            @negative_message = "#{@type} validator for #{@attr}"
           else
             @negative_message = "no #{@type} validator for #{@attr}"
             @result = false
