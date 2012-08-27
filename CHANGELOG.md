@@ -4,3 +4,4 @@
 + Add `validate_acceptance_of(attr)`.
 + Add `accepts_with(value)` option to `ValidateAcceptanceMatcher`.
 + Add `validate_confirmation_of(attr)`.
++ Add `validate_lenght_of(attr)`.
