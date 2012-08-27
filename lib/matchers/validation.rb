@@ -2,14 +2,14 @@ module MiniTest
   module Matchers
     module ActiveModel
       class ValidationMatcher # :nodoc:
-        def initialize field, type
-          @field = field
+        def initialize attr, type
+          @attr = attr
           @type  = type
         end
 
         def matches? subject
           @klass     = subject.is_a?(Class) ? subject : subject.class
-          @validator = @klass.validators_on(@field).find { |v| v.kind == @type }
+          @validator = @klass.validators_on(@attr).find { |v| v.kind == @type }
           @result    = true
 
           check_validator
@@ -28,14 +28,14 @@ module MiniTest
         private
 
         def description
-          "validate #{@type} of #{@field}"
+          "validate #{@type} of #{@attr}"
         end
 
         def check_validator
           if @validator
-            @positive_message = "#{@type} validator for #{@field}"
+            @positive_message = "#{@type} validator for #{@attr}"
           else
-            @negative_message = "no #{@type} validator for #{@field}"
+            @negative_message = "no #{@type} validator for #{@attr}"
             @result = false
           end
         end

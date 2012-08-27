@@ -1,3 +1,3 @@
 # 0.0.1 - unreleased
 
-# Add `validate_presence_of(field)`.
+# Add `validate_presence_of(attr)`.
