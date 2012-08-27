@@ -29,3 +29,8 @@ Or install it yourself as:
 ## Usage
 
 TODO: Write usage instructions here
+
+## License
+
+MIT License. Copyright 2012 Francesco Rodriguez. See [LICENSE](https://github.com/frodsan/minitest-activemodel/blob/master/LICENSE)
+for more information.
