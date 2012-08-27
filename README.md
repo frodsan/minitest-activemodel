@@ -30,6 +30,10 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Contributing
+
+Read [CONTRIBUTING](https://github.com/frodsan/minitest-activemodel/blob/master/CONTRIBUTING.md).
+
 ## License
 
 MIT License. Copyright 2012 Francesco Rodriguez. See [LICENSE](https://github.com/frodsan/minitest-activemodel/blob/master/LICENSE)
