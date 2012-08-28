@@ -5,9 +5,12 @@ module MiniTest
       #
       # Options:
       # * <tt>with_minimum</tt> - minimum length of the attribute.
+      #   Also, aliased as: <tt>with_min</tt> and <tt>is_at_least</tt>.
       #
       #   it { must validate_length_of :name }
       #   it { must validate_length_of(:name).with_minimum(10) }
+      #   it { must validate_length_of(:name).with_min(10) }
+      #   it { must validate_length_of(:name).is_at_least(10) }
       def validate_length_of attr
         ValidateLengthMatcher.new attr
       end
