@@ -57,9 +57,9 @@ module MiniTest
         def matches? subject
           return false unless @result = super(subject)
 
-          check_minimum if @minimum
-          check_maximum if @maximum
-          check_range   if @within
+          check :minimum if @minimum
+          check :maximum if @maximum
+          check_range    if @within
 
           @result
         end
@@ -75,24 +75,13 @@ module MiniTest
 
         private
 
-        def check_minimum
-          actual = @validator.options[:minimum]
+        def check option
+          actual = @validator.options[option]
 
-          if actual == @minimum
-            @positive_message << " with minimum of #{actual}"
+          if actual == instance_variable_get("@#{option}")
+            @positive_message << " with #{option} of #{actual}"
           else
-            @negative_message << " with minimum of #{actual}"
-            @result = false
-          end
-        end
-
-        def check_maximum
-          actual = @validator.options[:maximum]
-
-          if actual == @maximum
-            @positive_message << " with maximum of #{actual}"
-          else
-            @negative_message << " with maximum of #{actual}"
+            @negative_message << " with #{option} of #{actual}"
             @result = false
           end
         end
