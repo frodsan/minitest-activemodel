@@ -24,4 +24,12 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
   test 'must work with validates_size_of' do
     assert_must validate_length_of(:lastname), User
   end
+
+  test 'must validate minimum length of an attribute' do
+    assert_must validate_length_of(:name).with_minimum(10), User
+  end
+
+  test 'must not validate minimum length of an attribute' do
+    assert_wont validate_length_of(:name).with_minimum(100), User
+  end
 end
