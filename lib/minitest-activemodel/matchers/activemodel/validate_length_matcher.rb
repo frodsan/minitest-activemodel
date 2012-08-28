@@ -24,6 +24,8 @@ module MiniTest
           @minimum = value
           self
         end
+        alias :with_min    :with_minimum
+        alias :is_at_least :with_minimum
 
         def matches? subject
           return false unless @result = super(subject)

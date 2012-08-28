@@ -8,3 +8,4 @@
 + Add `validate_size_of` alias to `validate_length_of`.
 + Add `ensure_length_of` and `ensure_size_of` aliases to `validate_length_of`.
 + Add `with_minimum` option to `ValidateLengthMatcher`.
++ Add `with_min` and `is_at_least` aliases to `ValidateLengthMatcher#with_minimum`.
