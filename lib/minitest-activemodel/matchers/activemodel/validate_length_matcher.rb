@@ -23,7 +23,9 @@ module MiniTest
       alias :ensure_length_of :validate_length_of
       alias :ensure_size_of   :validate_length_of
 
-      class ValidateLengthMatcher < ValidationMatcher # :nodoc:
+      private
+
+      class ValidateLengthMatcher < ValidationMatcher
         def initialize attr
           super attr, :length
         end

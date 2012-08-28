@@ -12,7 +12,9 @@ module MiniTest
         ValidateAcceptanceMatcher.new attr
       end
 
-      class ValidateAcceptanceMatcher < ValidationMatcher # :nodoc:
+      private
+
+      class ValidateAcceptanceMatcher < ValidationMatcher
         def initialize attr
           super attr, :acceptance
         end
