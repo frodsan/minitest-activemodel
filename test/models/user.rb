@@ -9,6 +9,7 @@ class User
   validates_confirmation_of :password
 
   validates_length_of :name, maximum: 100
+  validates_size_of :lastname, maximum: 100
 
   validates_presence_of :name
 end
