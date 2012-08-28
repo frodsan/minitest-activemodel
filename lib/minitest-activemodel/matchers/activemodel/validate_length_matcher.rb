@@ -9,7 +9,7 @@ module MiniTest
       # * <tt>with_maximum</tt> - the maximum length of the attribute.
       #   Aliased as: <tt>with_max</tt> and <tt>is_at_most</tt>.
       # * <tt>within</tt> - the rage specifying the minimum and maximum length
-      #   of the attribute.
+      #   of the attribute. Aliased as: <tt>in</tt>.
       #
       #   it { must validate_length_of :name }
       #   it { must validate_length_of(:name).with_minimum(10) }
@@ -19,6 +19,7 @@ module MiniTest
       #   it { must validate_length_of(:name).with_max(100) }
       #   it { must validate_length_of(:name).is_at_most(100) }
       #   it { must validate_length_of(:name).within(10..100) }
+      #   it { must validate_length_of(:name).in(10..100) }
       def validate_length_of attr
         ValidateLengthMatcher.new attr
       end
@@ -51,6 +52,7 @@ module MiniTest
           @within = value
           self
         end
+        alias :in :within
 
         def matches? subject
           return false unless @result = super(subject)

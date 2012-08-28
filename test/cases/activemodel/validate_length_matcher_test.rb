@@ -21,7 +21,7 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
     assert_must ensure_size_of(:name), User
   end
 
-  test 'must work with validates_size_of' do
+  test 'validate_length_of must be aliased as validates_size_of' do
     assert_must validate_length_of(:lastname), User
   end
 
@@ -33,11 +33,11 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
     assert_wont validate_length_of(:name).with_minimum(100), User
   end
 
-  test 'with_minimum must be aliased to with_min' do
+  test 'with_minimum must be aliased as with_min' do
     assert_must validate_length_of(:name).with_min(10), User
   end
 
-  test 'with_minimum must be aliased to is_at_least' do
+  test 'with_minimum must be aliased as is_at_least' do
     assert_must ensure_length_of(:name).is_at_least(10), User
   end
 
@@ -55,5 +55,9 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
 
   test 'must not validate minimum and maximum length of an attribute' do
     assert_wont validate_length_of(:name).within(100..10), User
+  end
+
+  test 'within must be aliased as in' do
+    assert_must validate_length_of(:name).in(10..100), User
   end
 end
