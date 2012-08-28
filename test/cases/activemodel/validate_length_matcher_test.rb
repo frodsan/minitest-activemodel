@@ -12,4 +12,12 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
   test 'must be aliased as validate_size_of' do
     assert_must validate_size_of(:name), User
   end
+
+  test 'must be aliased as ensure_length_of' do
+    assert_must ensure_length_of(:name), User
+  end
+
+  test 'must be aliased as ensure_size_of' do
+    assert_must ensure_size_of(:name), User
+  end
 end

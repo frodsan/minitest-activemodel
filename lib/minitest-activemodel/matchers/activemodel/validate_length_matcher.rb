@@ -8,6 +8,8 @@ module MiniTest
         ValidationMatcher.new attr, :length
       end
       alias :validate_size_of :validate_length_of
+      alias :ensure_length_of :validate_length_of
+      alias :ensure_size_of   :validate_length_of
     end
   end
 end

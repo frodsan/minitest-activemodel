@@ -6,3 +6,4 @@
 + Add `validate_confirmation_of`.
 + Add `validate_length_of`.
 + Add `validate_size_of` alias to `validate_length_of`.
++ Add `ensure_length_of` and `ensure_size_of` aliases to `validate_length_of`.
