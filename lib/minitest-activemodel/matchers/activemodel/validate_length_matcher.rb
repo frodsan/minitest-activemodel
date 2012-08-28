@@ -5,7 +5,8 @@ module MiniTest
       #
       # Options:
       # * <tt>with_minimum</tt> - minimum length of the attribute.
-      #   Also, aliased as: <tt>with_min</tt> and <tt>is_at_least</tt>.
+      #   Aliased as: <tt>with_min</tt> and <tt>is_at_least</tt>.
+      # * <tt>with_maximum</tt> - maximum length of the attribute.
       #
       #   it { must validate_length_of :name }
       #   it { must validate_length_of(:name).with_minimum(10) }
@@ -30,10 +31,16 @@ module MiniTest
         alias :with_min    :with_minimum
         alias :is_at_least :with_minimum
 
+        def with_maximum value
+          @maximum = value
+          self
+        end
+
         def matches? subject
           return false unless @result = super(subject)
 
           check_minimum if @minimum
+          check_maximum if @maximum
 
           @result
         end
@@ -41,6 +48,7 @@ module MiniTest
         def description
           desc = []
           desc << "with minimum #{@minimum}" if @minimum
+          desc << " with maximum #{@maximum}" if @maximum
 
           super << desc.to_sentence
         end
@@ -49,10 +57,22 @@ module MiniTest
 
         def check_minimum
           actual = @validator.options[:minimum]
+
           if actual == @minimum
             @positive_message << " with minimum of #{actual}"
           else
             @negative_message << " with minimum of #{actual}"
+            @result = false
+          end
+        end
+
+        def check_maximum
+          actual = @validator.options[:maximum]
+
+          if actual == @maximum
+            @positive_message << " with maximum of #{actual}"
+          else
+            @negative_message << " with maximum of #{actual}"
             @result = false
           end
         end

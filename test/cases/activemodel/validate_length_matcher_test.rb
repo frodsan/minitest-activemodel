@@ -40,4 +40,12 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
   test 'with_minimum must be aliased to is_at_least' do
     assert_must ensure_length_of(:name).is_at_least(10), User
   end
+
+  test 'must validate maximum length of an attribute' do
+    assert_must validate_length_of(:name).with_maximum(100), User
+  end
+
+  test 'must not validate maximum length of an attribute' do
+    assert_wont validate_length_of(:name).with_maximum(10), User
+  end
 end
