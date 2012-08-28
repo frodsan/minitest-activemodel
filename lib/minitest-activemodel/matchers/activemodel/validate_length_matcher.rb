@@ -87,7 +87,7 @@ module MiniTest
         end
 
         def check_range
-          min, max = @within.min, @within.max
+          min, max   = @within.min, @within.max
           actual_min = @validator.options[:minimum]
           actual_max = @validator.options[:maximum]
 
