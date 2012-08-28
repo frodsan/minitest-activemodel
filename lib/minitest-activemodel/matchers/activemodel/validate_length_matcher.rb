@@ -7,6 +7,7 @@ module MiniTest
       def validate_length_of attr
         ValidationMatcher.new attr, :length
       end
+      alias :validate_size_of :validate_length_of
     end
   end
 end

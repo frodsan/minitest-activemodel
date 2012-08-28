@@ -8,4 +8,8 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
   test 'must not validate length of an attribute' do
     assert_wont validate_length_of(:unpresent), User
   end
+
+  test 'must be aliased as validate_size_of' do
+    assert_must validate_size_of(:name), User
+  end
 end
