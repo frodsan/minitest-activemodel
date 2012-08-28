@@ -10,3 +10,4 @@
 + Add `with_minimum` option to `ValidateLengthMatcher`.
 + Add `with_min` and `is_at_least` aliases to `ValidateLengthMatcher#with_minimum`.
 + Add `with_maximum` option to `ValidateLengthMatcher`.
++ Add `with_max` and `is_at_most` aliases to `ValidateLengthMatcher#with_maximum`.
