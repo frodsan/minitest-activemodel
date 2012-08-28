@@ -48,4 +48,12 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
   test 'must not validate maximum length of an attribute' do
     assert_wont validate_length_of(:name).with_maximum(10), User
   end
+
+  test 'must validate minimum and maximum length of an attribute' do
+    assert_must validate_length_of(:name).within(10..100), User
+  end
+
+  test 'must not validate minimum and maximum length of an attribute' do
+    assert_wont validate_length_of(:name).within(100..10), User
+  end
 end
