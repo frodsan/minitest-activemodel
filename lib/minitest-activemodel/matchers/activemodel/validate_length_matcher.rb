@@ -11,6 +11,7 @@ module MiniTest
       # * <tt>within</tt> - a range specifying the minimum and maximum length
       #   of the attribute. Aliased as: <tt>in</tt>.
       # * <tt>is</tt> - ensures the exact length of the attribute.
+      #   Aliased as: <tt>is_equal_to</tt>.
       #
       #   it { must validate_length_of(:name) }
       #   it { must validate_length_of(:name).with_minimum(10) }
