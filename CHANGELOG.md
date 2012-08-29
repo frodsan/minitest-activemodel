@@ -1,10 +1,10 @@
 # 0.0.1 - unreleased
 
-+ Add `validate_presence_of`.
-+ Add `validate_acceptance_of`.
++ Add `validate_presence_of` matcher.
++ Add `validate_acceptance_of` matcher.
 + Add `accepts_with(value)` option to `ValidateAcceptanceMatcher`.
-+ Add `validate_confirmation_of`.
-+ Add `validate_length_of`.
++ Add `validate_confirmation_of` matcher.
++ Add `validate_length_of` matcher.
 + Add `validate_size_of` alias to `validate_length_of`.
 + Add `ensure_length_of` and `ensure_size_of` aliases to `validate_length_of`.
 + Add `with_minimum` option to `ValidateLengthMatcher`.
