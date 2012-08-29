@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
   gem.files            = `git ls-files`.split "\n"
   gem.executables      = `git ls-files -- bin/*`.split("\n").map{|f| File.basename f }
   gem.test_files       = `git ls-files -- test/*`.split "\n"
-  gem.extra_rdoc_files = ['README.md', 'LICENSE', 'CHANGELOG.md']
+  gem.extra_rdoc_files = ['CHANGELOG.md', 'LICENSE.md', 'README.md']
   gem.rdoc_options     = ['--charset=UTF-8']
   gem.require_paths    = ['lib']
 

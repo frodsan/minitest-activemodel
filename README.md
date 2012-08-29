@@ -38,5 +38,5 @@ Read [CONTRIBUTING](https://github.com/frodsan/minitest-activemodel/blob/master/
 
 ## License
 
-MIT License. Copyright 2012 Francesco Rodriguez. See [LICENSE](https://github.com/frodsan/minitest-activemodel/blob/master/LICENSE)
+MIT License. Copyright 2012 Francesco Rodriguez. See [LICENSE](https://github.com/frodsan/minitest-activemodel/blob/master/LICENSE.md)
 for more information.
