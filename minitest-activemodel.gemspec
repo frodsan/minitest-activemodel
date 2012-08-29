@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Francesco Rodriguez']
   gem.email         = ['lrodriguezsanc@gmail.com']
   gem.description   = %q{MiniTest Matchers for ActiveModel::Validations}
-  gem.summary       = %q{MiniTest Matchers for ActiveModel::Validations}
+  gem.summary       = gem.description
   gem.homepage      = 'https://github.com/frodsan/minitest-activemodel'
 
   gem.files         = Dir.glob('{lib}/**/*') + %w(LICENSE README.md CHANGELOG.md)
