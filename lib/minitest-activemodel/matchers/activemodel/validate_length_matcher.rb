@@ -8,7 +8,7 @@ module MiniTest
       #   Aliased as: <tt>with_min</tt> and <tt>is_at_least</tt>.
       # * <tt>with_maximum</tt> - the maximum length of the attribute.
       #   Aliased as: <tt>with_max</tt> and <tt>is_at_most</tt>.
-      # * <tt>within</tt> - the rage specifying the minimum and maximum length
+      # * <tt>within</tt> - a range specifying the minimum and maximum length
       #   of the attribute. Aliased as: <tt>in</tt>.
       #
       #   it { must validate_length_of :name }
