@@ -14,3 +14,4 @@
 + Add `within` option to `ValidateLengthMatcher`.
 + Add `in` alias to `ValidateLengthMatcher#within`.
 + Add `is` option to `ValidateLengthMatcher`.
++ Add `is_equal_to` alias to `ValidateLengthMatcher#is`.

@@ -74,4 +74,8 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
   test 'must not validate exact length of an attribute' do
     assert_wont validate_length_of(:password).is(7), User
   end
+
+  test 'is must be aliased as is_equal_to' do
+    assert_must validate_length_of(:password).is_equal_to(8), User
+  end
 end

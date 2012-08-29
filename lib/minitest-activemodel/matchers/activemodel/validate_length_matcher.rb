@@ -22,6 +22,7 @@ module MiniTest
       #   it { must validate_length_of(:name).within(10..100) }
       #   it { must validate_length_of(:name).in(10..100) }
       #   it { must validate_length_of(:password).is(8) }
+      #   it { must validate_length_of(:password).is_equal_to(8) }
       #
       # This matcher is also aliased as:
       #
@@ -73,6 +74,7 @@ module MiniTest
           @is = value
           self
         end
+        alias :is_equal_to :is
 
         def matches? subject
           return false unless @result = super(subject)
