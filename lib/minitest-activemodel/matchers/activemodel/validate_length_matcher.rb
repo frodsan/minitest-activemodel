@@ -20,6 +20,18 @@ module MiniTest
       #   it { must validate_length_of(:name).is_at_most(100) }
       #   it { must validate_length_of(:name).within(10..100) }
       #   it { must validate_length_of(:name).in(10..100) }
+      #
+      # This matcher is also aliased as:
+      #
+      #   validate_size_of
+      #   ensure_length_of
+      #   ensure_size_of
+      #
+      # So you can do something like:
+      #
+      #   it { must ensure_length_of(:name).is_at_least(10) }
+      #   it { must ensure_size_of(:name).is_at_most(100) }
+      #   it { must validate_size_of(:name).in(10..100) }
       def validate_length_of attr
         ValidateLengthMatcher.new attr
       end
