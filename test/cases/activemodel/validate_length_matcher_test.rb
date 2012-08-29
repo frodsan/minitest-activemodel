@@ -60,4 +60,10 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
   test 'within must be aliased as in' do
     assert_must validate_length_of(:name).in(10..100), User
   end
+
+  test 'within must be a range' do
+    assert_raises ArgumentError do
+      assert_must validate_length_of(:name).within(10), User
+    end
+  end
 end

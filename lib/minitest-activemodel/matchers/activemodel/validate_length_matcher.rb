@@ -61,6 +61,7 @@ module MiniTest
         alias :is_at_most :with_maximum
 
         def within value
+          raise ArgumentError, 'within must be a Range' unless value.is_a? Range
           @within = value
           self
         end
