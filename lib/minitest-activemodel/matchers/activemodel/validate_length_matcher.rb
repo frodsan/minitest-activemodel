@@ -23,9 +23,9 @@ module MiniTest
       #
       # This matcher is also aliased as:
       #
-      #   validate_size_of
-      #   ensure_length_of
-      #   ensure_size_of
+      # * <tt>validate_size_of</tt>.
+      # * <tt>ensure_length_of</tt>.
+      # * <tt>ensure_size_of</tt>.
       #
       # So you can do something like:
       #
