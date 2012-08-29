@@ -76,6 +76,10 @@ module MiniTest
         end
         alias :is_equal_to :is
 
+        # TODO: add helper methods for :too_long, :too_short
+        # and :wrong_length options.
+        # See http://api.rubyonrails.org/classes/ActiveModel/Validations/HelperMethods.html#method-i-validates_length_of
+
         def matches? subject
           return false unless @result = super(subject)
 
