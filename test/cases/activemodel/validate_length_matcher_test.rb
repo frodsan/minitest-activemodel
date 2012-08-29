@@ -66,4 +66,12 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
       assert_must validate_length_of(:name).within(10), User
     end
   end
+
+  test 'must validate exact length of an attribute' do
+    assert_must validate_length_of(:password).is(8), User
+  end
+
+  test 'must not validate exact length of an attribute' do
+    assert_wont validate_length_of(:password).is(7), User
+  end
 end

@@ -4,12 +4,13 @@ module MiniTest
       # Ensures that the length/size of the attribute is validated.
       #
       # Options:
-      # * <tt>with_minimum</tt> - the minimum length of the attribute.
+      # * <tt>with_minimum</tt> - ensures the minimum length of the attribute.
       #   Aliased as: <tt>with_min</tt> and <tt>is_at_least</tt>.
-      # * <tt>with_maximum</tt> - the maximum length of the attribute.
+      # * <tt>with_maximum</tt> - ensures the maximum length of the attribute.
       #   Aliased as: <tt>with_max</tt> and <tt>is_at_most</tt>.
       # * <tt>within</tt> - a range specifying the minimum and maximum length
       #   of the attribute. Aliased as: <tt>in</tt>.
+      # * <tt>is</tt> - ensures the exact length of the attribute.
       #
       #   it { must validate_length_of(:name) }
       #   it { must validate_length_of(:name).with_minimum(10) }
@@ -20,6 +21,7 @@ module MiniTest
       #   it { must validate_length_of(:name).is_at_most(100) }
       #   it { must validate_length_of(:name).within(10..100) }
       #   it { must validate_length_of(:name).in(10..100) }
+      #   it { must validate_length_of(:password).is(8) }
       #
       # This matcher is also aliased as:
       #
@@ -67,12 +69,18 @@ module MiniTest
         end
         alias :in :within
 
+        def is value
+          @is = value
+          self
+        end
+
         def matches? subject
           return false unless @result = super(subject)
 
-          check :minimum if @minimum
-          check :maximum if @maximum
-          check_range    if @within
+          check :minimum  if @minimum
+          check :maximum  if @maximum
+          check_range     if @within
+          check_precision if @is
 
           @result
         end
@@ -82,6 +90,7 @@ module MiniTest
           desc << " with minimum #{@minimum}" if @minimum
           desc << " with maximum #{@maximum}" if @maximum
           desc << " within range #{@within}"  if @within
+          desc << " is equal to #{@is}"       if @is
 
           super << desc.to_sentence
         end
@@ -108,6 +117,17 @@ module MiniTest
             @positive_message << " with range #{@within}"
           else
             @negative_message << " with range #{actual_min..actual_max}"
+            @result = false
+          end
+        end
+
+        def check_precision
+          actual = @validator.options[:is]
+
+          if actual == @is
+            @positive_message << " is equal to #{@is}"
+          else
+            @negative_message << " is equal to #{actual}"
             @result = false
           end
         end
