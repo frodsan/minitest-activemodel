@@ -19,6 +19,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'minitest', '~> 3.3.0'
   gem.add_dependency 'minitest-matchers', '~> 1.2.0'
   gem.add_dependency 'activemodel', '~> 3.2.0'
-  gem.add_development_dependency 'minitest-sugar'
   gem.add_development_dependency 'rake'
 end

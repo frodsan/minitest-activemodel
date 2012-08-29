@@ -1,9 +1,9 @@
 require 'minitest/autorun'
-require 'minitest-sugar'
+require 'active_support/testing/declarative'
 require 'minitest-activemodel'
 require 'models/user'
 
 class MiniTest::Unit::TestCase
   include MiniTest::Matchers::ActiveModel
-  extend MiniTest::Sugar
+  extend ActiveSupport::Testing::Declarative
 end
