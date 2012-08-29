@@ -6,7 +6,7 @@ module MiniTest
       # Options:
       # * <tt>accept_with</tt> - value that is considered accepted.
       #
-      #   it { must validate_acceptance_of :eula }
+      #   it { must validate_acceptance_of(:eula) }
       #   it { must validate_acceptance_of(:terms_of_service).accept_with(true) }
       def validate_acceptance_of attr
         ValidateAcceptanceMatcher.new attr
