@@ -1,28 +1,10 @@
 require 'test_helper'
 
 class ValidateLengthMatcher < MiniTest::Unit::TestCase
-  test 'must validate length of an attribute' do
-    assert_must validate_length_of(:name), User
-  end
-
-  test 'must not validate length of an attribute' do
-    assert_wont validate_length_of(:unpresent), User
-  end
-
-  test 'must be aliased as validate_size_of' do
-    assert_must validate_size_of(:name), User
-  end
-
-  test 'must be aliased as ensure_length_of' do
-    assert_must ensure_length_of(:name), User
-  end
-
-  test 'must be aliased as ensure_size_of' do
-    assert_must ensure_size_of(:name), User
-  end
-
-  test 'validate_length_of must be aliased as validates_size_of' do
-    assert_must validate_length_of(:lastname), User
+  test 'raises when no option is given' do
+    assert_raises ArgumentError do
+      assert_must validate_length_of(:name), User
+    end
   end
 
   test 'must validate minimum length of an attribute' do
@@ -77,5 +59,21 @@ class ValidateLengthMatcher < MiniTest::Unit::TestCase
 
   test 'is must be aliased as is_equal_to' do
     assert_must validate_length_of(:password).is_equal_to(8), User
+  end
+
+  test 'must be aliased as validate_size_of' do
+    assert_must validate_size_of(:name).with_max(100), User
+  end
+
+  test 'must be aliased as ensure_length_of' do
+    assert_must ensure_length_of(:name).with_max(100), User
+  end
+
+  test 'must be aliased as ensure_size_of' do
+    assert_must ensure_size_of(:name).is_at_most(100), User
+  end
+
+  test 'must be aliased as validates_size_of' do
+    assert_must validate_length_of(:lastname).with_max(100), User
   end
 end

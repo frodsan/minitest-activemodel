@@ -4,7 +4,7 @@ module MiniTest
       class ValidationMatcher # :nodoc:
         def initialize attr, type
           @attr = attr
-          @type  = type
+          @type = type
         end
 
         def matches? subject

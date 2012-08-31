@@ -2,6 +2,7 @@ module MiniTest
   module Matchers
     module ActiveModel
       # Ensures that the length/size of the attribute is validated.
+      # You must supply at least one of the following options:
       #
       # Options:
       # * <tt>with_minimum</tt> - ensures the minimum length of the attribute.
@@ -13,7 +14,6 @@ module MiniTest
       # * <tt>is</tt> - ensures the exact length of the attribute.
       #   Aliased as: <tt>is_equal_to</tt>.
       #
-      #   it { must validate_length_of(:name) }
       #   it { must validate_length_of(:name).with_minimum(10) }
       #   it { must validate_length_of(:name).with_min(10) }
       #   it { must validate_length_of(:name).is_at_least(10) }
@@ -82,6 +82,10 @@ module MiniTest
         # See http://api.rubyonrails.org/classes/ActiveModel/Validations/HelperMethods.html#method-i-validates_length_of
 
         def matches? subject
+          if [@minimum, @maximum, @within, @is].all? &:nil?
+            raise ArgumentError, 'You have to supply an option for this matcher.'
+          end
+
           return false unless @result = super(subject)
 
           check :minimum  if @minimum

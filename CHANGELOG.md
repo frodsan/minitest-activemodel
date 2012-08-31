@@ -13,8 +13,9 @@
 + Add `with_max` and `is_at_most` aliases to `ValidateLengthMatcher#with_maximum`.
 + Add `within` option to `ValidateLengthMatcher`.
 + Add `in` alias to `ValidateLengthMatcher#within`.
-+ Raise an `ArgumentError` if the given value for `ValidateLengthMatcher#within`
++ Raise `ArgumentError` if the given value for `ValidateLengthMatcher#within`
   is not a `Range`.
 + Add `is` option to `ValidateLengthMatcher`.
 + Add `is_equal_to` alias to `ValidateLengthMatcher#is`.
 + Add `validate_format_of` matcher.
++ Raise `ArgumentError` if no option is given for `validate_length_of` matcher.
