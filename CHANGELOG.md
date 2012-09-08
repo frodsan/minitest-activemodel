@@ -19,3 +19,4 @@
 + Add `is_equal_to` alias to `ValidateLengthMatcher#is`.
 + Add `validate_format_of` matcher.
 + Raise `ArgumentError` if no option is given for `validate_length_of` matcher.
++ Add `to_allow` and `to_not_allow` options to `ValidateFormatMatcher`.

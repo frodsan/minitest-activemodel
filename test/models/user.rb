@@ -8,7 +8,7 @@ class User
 
   validates_confirmation_of :password
 
-  validates_format_of :email, with: /NOSPAM/
+  validates_format_of :email, with: /^([^\s]+)((?:[-a-z0-9]\.)[a-z]{2,})$/i
 
   validates_length_of :name, minimum: 10, maximum: 100
   validates_length_of :password, is: 8
