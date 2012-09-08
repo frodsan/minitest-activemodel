@@ -21,3 +21,4 @@
 + Raise `ArgumentError` if no option is given for `validate_length_of` matcher.
 + Add `to_allow` and `to_not_allow` options to `ValidateFormatMatcher`.
 + Raise `ArgumentError` if no option is given for `validate_format_of` matcher.
++ Raise error if `to_allow` and `to_not_allow` options are called at once.

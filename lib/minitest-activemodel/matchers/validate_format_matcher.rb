@@ -22,11 +22,15 @@ module MiniTest
         end
 
         def to_allow valid_value
+          raise 'You must not call both to_allow and to_not_allow' if @invalid
+
           @valid = valid_value
           self
         end
 
         def to_not_allow invalid_value
+          raise 'You must not call both to_allow and to_not_allow' if @valid
+
           @invalid = invalid_value
           self
         end
