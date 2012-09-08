@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class ValidateFormatMatcherTest < MiniTest::Unit::TestCase
+  test 'raises ArgumentError when no option is given' do
+    assert_raises(ArgumentError) { assert_must validate_format_of(:email), User}
+  end
+
   test 'must validate valid format of an attribute' do
     assert_must validate_format_of(:email).to_allow('foo@bar.com'), User
   end

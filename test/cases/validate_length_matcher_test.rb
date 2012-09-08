@@ -1,10 +1,8 @@
 require 'test_helper'
 
 class ValidateLengthMatcher < MiniTest::Unit::TestCase
-  test 'raises when no option is given' do
-    assert_raises ArgumentError do
-      assert_must validate_length_of(:name), User
-    end
+  test 'raises ArgumentError when no option is given' do
+    assert_raises(ArgumentError) { assert_must validate_length_of(:name), User }
   end
 
   test 'must validate minimum length of an attribute' do

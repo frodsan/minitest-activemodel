@@ -82,9 +82,7 @@ module MiniTest
         # See http://api.rubyonrails.org/classes/ActiveModel/Validations/HelperMethods.html#method-i-validates_length_of
 
         def matches? subject
-          if [@minimum, @maximum, @within, @is].all? &:nil?
-            raise ArgumentError, 'You have to supply an option for this matcher.'
-          end
+          validate_invalid_options! @minimum, @maximum, @within, @is
 
           return false unless @result = super(subject)
 

@@ -32,6 +32,8 @@ module MiniTest
         end
 
         def matches? subject
+          validate_invalid_options! @valid, @invalid
+
           return false unless @result = super(subject)
 
           check_valid_value   if @valid
