@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.rdoc_options     = ['--charset=UTF-8']
   gem.require_paths    = ['lib']
 
-  gem.add_dependency 'minitest', '~> 3.3.0'
+  gem.add_dependency 'minitest', '~> 3.4.0'
   gem.add_dependency 'minitest-matchers', '~> 1.2.0'
   gem.add_dependency 'activemodel', '~> 3.2.0'
   gem.add_development_dependency 'rake'
