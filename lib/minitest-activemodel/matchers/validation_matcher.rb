@@ -42,7 +42,7 @@ module MiniTest
         end
 
         def validate_invalid_options! *options
-          if options.all? &:nil?
+          if options.all?(&:nil?)
             raise ArgumentError, 'You have to supply an option for this matcher'
           end
         end

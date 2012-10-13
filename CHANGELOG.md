@@ -1,3 +1,7 @@
+# 0.0.2 - unreleased
+
++ Add `validate_uniqueness_of` matcher.
+
 # 0.0.1 - 10/13/12
 
 + Add `validate_presence_of` matcher.
