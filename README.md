@@ -4,7 +4,7 @@
 [![Dependency Status](https://gemnasium.com/frodsan/minitest-activemodel.png)](https://gemnasium.com/frodsan/minitest-activemodel)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/frodsan/minitest-activemodel)
 
-MiniTest matchers for ActiveModel::Validations.
+MiniTest matchers for `ActiveModel::Validations`.
 
 ## Support
 
