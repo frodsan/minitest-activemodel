@@ -1,4 +1,4 @@
-# 0.0.1 - unreleased
+# 0.0.1 - 10/13/12
 
 + Add `validate_presence_of` matcher.
 + Add `validate_acceptance_of` matcher.
