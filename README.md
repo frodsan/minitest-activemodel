@@ -29,7 +29,7 @@ Or install it yourself as:
 
 ## Usage
 
-Check the [official documentation](http://rubydoc.info/gems/minitest-activemodel/)
+Check the [official documentation](http://rubydoc.info/github/frodsan/minitest-activemodel/master/frames)
 for more details.
 
 ## Contributing
