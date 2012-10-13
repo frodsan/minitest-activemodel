@@ -16,6 +16,8 @@ module MiniTest
 
       class ValidateAcceptanceMatcher < ValidationMatcher
         def initialize attr
+          @accepted = nil
+
           super attr, :acceptance
         end
 

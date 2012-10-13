@@ -47,6 +47,8 @@ module MiniTest
 
       class ValidateLengthMatcher < ValidationMatcher
         def initialize attr
+          @minimum, @maximum, @within, @is = nil
+
           super attr, :length
         end
 

@@ -18,6 +18,8 @@ module MiniTest
 
       class ValidateFormatMatcher < ValidationMatcher
         def initialize attr
+          @valid, @invalid = nil
+
           super attr, :format
         end
 
