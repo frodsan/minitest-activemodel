@@ -10,7 +10,7 @@ MiniTest matchers for ActiveModel::Validations.
 
 This gem supports:
 
-+ Ruby 1.9.3.
++ Ruby 1.9.
 + ActiveModel 3.2.x.
 
 ## Installation
