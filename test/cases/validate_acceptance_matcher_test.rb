@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'models/user'
 
 class ValidateAcceptanceTest < MiniTest::Unit::TestCase
   test 'must validate acceptance of an attribute' do

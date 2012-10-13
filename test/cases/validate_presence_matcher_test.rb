@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'models/user'
 
 class ValidatePresenceMatcherTest < MiniTest::Unit::TestCase
   test 'must validate presence of a required attribute' do

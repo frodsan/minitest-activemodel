@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'models/user'
 
 class ValidateLengthMatcher < MiniTest::Unit::TestCase
   test 'raises ArgumentError when no option is given' do

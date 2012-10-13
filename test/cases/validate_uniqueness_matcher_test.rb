@@ -1,5 +1,6 @@
 require 'test_helper'
 require 'ar_test_helper'
+require 'models/person'
 
 class ValidateUniquenessMatcherTest < MiniTest::Unit::TestCase
   test 'must validate uniqueness of an attribute' do

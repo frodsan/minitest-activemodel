@@ -13,7 +13,3 @@ ActiveRecord::Schema.define do
     t.string :email
   end
 end
-
-class Person < ActiveRecord::Base
-  validates_uniqueness_of :email
-end

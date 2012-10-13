@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'models/user'
 
 class ValidateConfirmationMatcherTest < MiniTest::Unit::TestCase
   test 'must validate confirmation of an attribute' do
