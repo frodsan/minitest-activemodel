@@ -29,7 +29,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: In this section, it must appear the Official Documentation link.
+Check the [official documentation](http://rubydoc.info/gems/minitest-activemodel/)
+for more details.
 
 ## Contributing
 
@@ -37,5 +38,5 @@ Read [CONTRIBUTING](https://github.com/frodsan/minitest-activemodel/blob/master/
 
 ## License
 
-MIT License. Copyright 2012 Francesco Rodriguez. See [LICENSE](https://github.com/frodsan/minitest-activemodel/blob/master/LICENSE.md)
+MIT License. Copyright 2012 Francesco Rodriguez. See [LICENSE.md](https://github.com/frodsan/minitest-activemodel/blob/master/LICENSE.md)
 for more information.
