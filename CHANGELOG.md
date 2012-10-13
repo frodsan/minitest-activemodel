@@ -1,6 +1,7 @@
 # 0.0.2 - unreleased
 
 + Add `validate_uniqueness_of` matcher.
++ Add `scoped_to` option to `validate_uniqueness_of` matcher.
 
 # 0.0.1 - 10/13/12
 

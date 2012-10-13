@@ -10,4 +10,12 @@ class ValidateUniquenessMatcherTest < MiniTest::Unit::TestCase
   test 'must not validate uniqueness of an attribute' do
     assert_wont validate_uniqueness_of(:not_unique), Person
   end
+
+  test 'must validate scope of an unique attribute' do
+    assert_must validate_uniqueness_of(:email).scoped_to(:site), Person
+  end
+
+  test 'must not validate scope of an unique attribute' do
+    assert_wont validate_uniqueness_of(:email).scoped_to(:none), Person
+  end
 end

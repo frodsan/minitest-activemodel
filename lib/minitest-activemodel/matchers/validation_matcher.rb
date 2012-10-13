@@ -1,7 +1,11 @@
+require_relative 'helpers'
+
 module MiniTest
   module Matchers
     module ActiveModel
       class ValidationMatcher # :nodoc:
+        include Helpers
+
         def initialize attr, type
           @attr = attr
           @type = type
