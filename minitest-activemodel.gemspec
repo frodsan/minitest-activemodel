@@ -10,6 +10,7 @@ Gem::Specification.new do |gem|
   gem.description      = %q{MiniTest Matchers for ActiveModel::Validations}
   gem.summary          = gem.description
   gem.homepage         = 'https://github.com/frodsan/minitest-activemodel'
+  gem.licenses         = ['MIT']
 
   gem.files            = `git ls-files`.split "\n"
   gem.executables      = `git ls-files -- bin/*`.split("\n").map{|f| File.basename f }
