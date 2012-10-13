@@ -1,7 +1,7 @@
 module MiniTest
   module Matchers
     module ActiveModel
-      # Ensures that the model is not valid if the given attribute is not
+      # Ensures that the model is invalid if the given attribute is not
       # formatted correctly.
       #
       # Options:

@@ -1,7 +1,7 @@
 module MiniTest
   module Matchers
     module ActiveModel
-      # Ensures that the model is not valid if the given attribute is not accepted.
+      # Ensures that the model is invalid if the given attribute is not accepted.
       #
       # Options:
       # * <tt>accept_with</tt> - value that is considered accepted.
