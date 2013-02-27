@@ -1,6 +1,7 @@
 require 'minitest/matchers'
 require 'matchers/validation_matcher.rb'
 require 'matchers/validate_acceptance_matcher'
+require 'matchers/validate_associated_matcher'
 require 'matchers/validate_confirmation_matcher'
 require 'matchers/validate_format_matcher'
 require 'matchers/validate_length_matcher'

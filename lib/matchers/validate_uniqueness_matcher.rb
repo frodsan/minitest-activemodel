@@ -10,7 +10,7 @@ module MiniTest
       #
       #   it { must validate_uniqueness_of(:email) }
       #   it { must validate_uniqueness_of(:email).scoped_to(:name) }
-      #   it { must validate_uniqueness_of(:email).scoped_to(:first_name, :last_name) }
+      #   it { must validate_uniqueness_of(:email).scoped_to(:first_name, :last_name) }
       #   it { must validate_uniqueness_of(:keyword).case_insensitive }
       def validate_uniqueness_of attr
         ValidateUniquenessMatcher.new attr

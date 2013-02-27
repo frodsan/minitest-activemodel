@@ -1,5 +1,6 @@
 # 1.0.0 - unreleased
 
++ Add `validate_associated` matcher.
 + Add `with_message` option to all the matchers.
 + Add `on` option to all the matchers.
 + Add support for activerecord and activemodel 3.2.x, 4.0.0 and edge.
