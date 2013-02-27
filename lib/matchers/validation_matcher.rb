@@ -13,7 +13,7 @@ module MiniTest
         end
 
         def on *contexts
-          @expected_on = contexts
+          @expected_on = clean_contexts contexts
           self
         end
 
@@ -53,7 +53,7 @@ module MiniTest
         end
 
         def check_on
-          on = @validator.options[:on]
+          on = clean_contexts @validator.options[:on]
 
           if on.sort == @expected_on.sort
             @positive_message << " on #{on.empty? ? 'all actions' : to_sentence(on)}"
@@ -61,6 +61,10 @@ module MiniTest
             @negative_message << " on #{on.empty? ? 'all actions' : to_sentence(on)}"
             @result = false
           end
+        end
+
+        def clean_contexts contexts
+          [contexts].flatten.compact
         end
 
         # TODO: Document this helper method.
