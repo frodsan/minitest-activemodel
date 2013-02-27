@@ -1,6 +1,7 @@
 # 1.0.0 - unreleased
 
-+ Add support for Rubinius.
++ Add support for activerecord and activemodel 3.2.x, 4.0.0 and edge.
++ Add support for Ruby 1.9.3, 2.0.0, ruby-head, rbx-19mode.
 + Add `validate_uniqueness_of` matcher.
 + Add `scoped_to` option to `validate_uniqueness_of` matcher.
 + Add `case_insensitive` option to `validate_uniqueness_of` matcher.
