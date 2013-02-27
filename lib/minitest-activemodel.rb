@@ -1,5 +1,3 @@
-require 'minitest-activemodel/version'
-
 require 'minitest/matchers'
 require 'minitest-activemodel/matchers/validation_matcher.rb'
 require 'minitest-activemodel/matchers/validate_acceptance_matcher'
