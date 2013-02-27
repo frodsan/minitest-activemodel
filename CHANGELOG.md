@@ -1,5 +1,6 @@
 # 1.0.0 - unreleased
 
++ Add `with_message` option to all the matchers.
 + Add `on` option to all the matchers.
 + Add support for activerecord and activemodel 3.2.x, 4.0.0 and edge.
 + Add support for Ruby 1.9.3, 2.0.0, ruby-head, rbx-19mode.

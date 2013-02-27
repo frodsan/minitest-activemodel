@@ -9,11 +9,18 @@ module MiniTest
         def initialize attr, type
           @attr = attr
           @type = type
-          @expected_on = nil
+          @expected_on = @expected_message = nil
         end
 
+        # TODO: Add documentation.
         def on *contexts
           @expected_on = clean_contexts contexts
+          self
+        end
+
+        # TODO: Add documentation.
+        def with_message expected_message
+          @expected_message = expected_message
           self
         end
 
@@ -23,7 +30,8 @@ module MiniTest
           @result    = true
 
           check_validator
-          check_on if @expected_on
+          check_on        if @expected_on
+          check_message   if @expected_message
 
           @result
         end
@@ -59,6 +67,17 @@ module MiniTest
             @positive_message << " on #{on.empty? ? 'all actions' : to_sentence(on)}"
           else
             @negative_message << " on #{on.empty? ? 'all actions' : to_sentence(on)}"
+            @result = false
+          end
+        end
+
+        def check_message
+          error_message = @validator.options[:message]
+
+          if @expected_message == error_message
+            @positive_message << " with message: #{error_message.inspect}"
+          else
+            @negative_message << " with message: #{error_message.inspect}"
             @result = false
           end
         end
