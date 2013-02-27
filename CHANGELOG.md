@@ -1,5 +1,7 @@
 # 1.0.0 - unreleased
 
++ Add `validate_exclusion_of` matcher.
++ Add `validate_inclusion_of` matcher.
 + Add `validate_associated` matcher.
 + Add `with_message` option to all the matchers.
 + Add `on` option to all the matchers.
