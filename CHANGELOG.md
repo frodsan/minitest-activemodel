@@ -1,4 +1,4 @@
-# 1.0.0 - unreleased
+# 1.0.0 - February 27, 2013
 
 + Add `validate_exclusion_of` matcher.
 + Add `validate_inclusion_of` matcher.
@@ -11,7 +11,7 @@
 + Add `scoped_to` option to `validate_uniqueness_of` matcher.
 + Add `case_insensitive` option to `validate_uniqueness_of` matcher.
 
-# 0.0.1 - 10/13/12
+# 0.0.1 - October 13, 2012
 
 + Add `validate_presence_of` matcher.
 + Add `validate_acceptance_of` matcher.
