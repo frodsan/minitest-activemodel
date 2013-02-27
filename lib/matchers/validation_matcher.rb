@@ -9,6 +9,12 @@ module MiniTest
         def initialize attr, type
           @attr = attr
           @type = type
+          @expected_on = nil
+        end
+
+        def on *contexts
+          @expected_on = contexts
+          self
         end
 
         def matches? subject
@@ -17,6 +23,7 @@ module MiniTest
           @result    = true
 
           check_validator
+          check_on if @expected_on
 
           @result
         end
@@ -45,6 +52,18 @@ module MiniTest
           end
         end
 
+        def check_on
+          on = @validator.options[:on]
+
+          if on.sort == @expected_on.sort
+            @positive_message << " on #{on.empty? ? 'all actions' : to_sentence(on)}"
+          else
+            @negative_message << " on #{on.empty? ? 'all actions' : to_sentence(on)}"
+            @result = false
+          end
+        end
+
+        # TODO: Document this helper method.
         def validate_invalid_options! *options
           if options.all?(&:nil?)
             raise ArgumentError, 'You have to supply an option for this matcher'

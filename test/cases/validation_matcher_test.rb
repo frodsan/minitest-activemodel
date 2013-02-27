@@ -33,11 +33,24 @@ class ValidationMatcherTest < MiniTest::Unit::TestCase
     assert_match 'type validator for attr', @validator.negative_failure_message
   end
 
+  test 'returns true if validation type exists with on option' do
+    subject = create_subject :attr, :type, on: [ :save ]
+
+    assert @validator.on(:save).matches? subject
+  end
+
+  test 'returns false if validation type exists with on option' do
+    subject = create_subject :attr, :type, on: [ :create ]
+
+    assert !@validator.on(:save).matches?(subject)
+  end
+
   private
 
-  def create_subject attr, type
+  def create_subject attr, type, options={}
     arg = MiniTest::Mock.new
     arg.expect :kind, type
+    arg.expect :options, options
 
     subject = MiniTest::Mock.new
     subject.expect :is_a?, true, [Class]
