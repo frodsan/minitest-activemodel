@@ -7,6 +7,6 @@ rvm:
   - ruby-head
   - rbx-19mode
 gemfile:
-  Gemfile
-  Gemfile.rails4
-  Gemfile.edge
+  - Gemfile
+  - Gemfile.rails4
+  - Gemfile.edge
