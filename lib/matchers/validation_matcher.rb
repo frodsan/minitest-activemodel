@@ -1,5 +1,3 @@
-require_relative 'helpers'
-
 module MiniTest
   module Matchers
     module ActiveModel
