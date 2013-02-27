@@ -1,13 +1,12 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path '../lib/minitest-activemodel/version', __FILE__
 
 Gem::Specification.new do |gem|
   gem.name             = 'minitest-activemodel'
-  gem.version          = MiniTest::Matchers::ActiveModel::VERSION
+  gem.version          = '1.0.0'
 
   gem.authors          = ['Francesco Rodriguez']
   gem.email            = ['lrodriguezsanc@gmail.com']
-  gem.description      = %q{MiniTest Matchers for ActiveModel::Validations}
+  gem.description      = %q{MiniTest matchers for ActiveModel::Validations}
   gem.summary          = gem.description
   gem.homepage         = 'https://github.com/frodsan/minitest-activemodel'
   gem.licenses         = ['MIT']

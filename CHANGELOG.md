@@ -1,4 +1,4 @@
-# 0.0.2 - unreleased
+# 1.0.0 - unreleased
 
 + Add support for Rubinius.
 + Add `validate_uniqueness_of` matcher.
