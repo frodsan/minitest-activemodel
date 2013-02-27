@@ -4,8 +4,8 @@ Gem::Specification.new do |gem|
   gem.name             = 'minitest-activemodel'
   gem.version          = '1.0.0'
 
-  gem.authors          = ['Francesco Rodriguez']
-  gem.email            = ['lrodriguezsanc@gmail.com']
+  gem.authors          = ['Francesco Rodriguez', 'Ryan McGeary']
+  gem.email            = ['lrodriguezsanc@gmail.com', 'ryan@mcgeary.org']
   gem.description      = %q{MiniTest matchers for ActiveModel::Validations}
   gem.summary          = gem.description
   gem.homepage         = 'https://github.com/frodsan/minitest-activemodel'
