@@ -34,15 +34,15 @@ class ValidationMatcherTest < MiniTest::Unit::TestCase
   end
 
   test 'returns true if validation type exists with on option' do
-    subject = create_subject :attr, :type, on: [ :save ]
+    subject = create_subject :attr, :type, on: [ :create ]
 
-    assert @validator.on(:save).matches? subject
+    assert @validator.on(:create).matches? subject
   end
 
   test 'returns false if validation type exists with on option' do
     subject = create_subject :attr, :type, on: [ :create ]
 
-    assert !@validator.on(:save).matches?(subject)
+    assert !@validator.on(:update).matches?(subject)
   end
 
   private

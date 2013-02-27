@@ -64,7 +64,7 @@ module MiniTest
         end
 
         def clean_contexts contexts
-          [contexts].flatten.compact
+          [contexts].flatten.compact.reject { |ctx| ctx == :save }
         end
 
         # TODO: Document this helper method.
