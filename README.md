@@ -27,6 +27,12 @@ Or install it yourself as:
 
     $ gem install minitest-activemodel
 
+Then, you have to include the matchers into TestCase
+
+    class MiniTest::Unit::TestCase
+      include MiniTest::Matchers::ActiveModel
+    end
+
 ## Usage
 
 Check the [official documentation](http://rubydoc.info/github/frodsan/minitest-activemodel/master/frames)
