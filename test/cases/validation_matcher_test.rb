@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ValidationMatcherTest < MiniTest::Unit::TestCase
+class ValidationMatcherTest < Minitest::Test
   def setup
     @validator = ValidationMatcher.new :attr, :type
   end

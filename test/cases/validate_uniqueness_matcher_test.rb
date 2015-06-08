@@ -2,7 +2,7 @@ require 'test_helper'
 require 'ar_test_helper'
 require 'models/person'
 
-class ValidateUniquenessMatcherTest < MiniTest::Unit::TestCase
+class ValidateUniquenessMatcherTest < Minitest::Test
   test 'must validate uniqueness of an attribute' do
     assert_must validate_uniqueness_of(:email), Person
   end

@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'models/user'
 
-class ValidateConfirmationMatcherTest < MiniTest::Unit::TestCase
+class ValidateConfirmationMatcherTest < Minitest::Test
   test 'must validate confirmation of an attribute' do
     assert_must validate_confirmation_of(:password), User
   end
