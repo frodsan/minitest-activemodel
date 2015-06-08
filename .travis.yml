@@ -6,6 +6,7 @@ rvm:
   - rbx-19mode
 gemfile:
   - Gemfile
+  - gemfiles/matchers_vaccine.gemfile
   - gemfiles/rails-3.2.gemfile
   - gemfiles/rails-4.2.gemfile
   - gemfiles/rails-master.gemfile
