@@ -1,8 +1,9 @@
 # minitest-activemodel
 
-[![Build Status](https://secure.travis-ci.org/frodsan/minitest-activemodel.png?branch=master&.png)](http://travis-ci.org/frodsan/minitest-activemodel)
-[![Dependency Status](https://gemnasium.com/frodsan/minitest-activemodel.png)](https://gemnasium.com/frodsan/minitest-activemodel)
-[![Code Climate](https://codeclimate.com/github/frodsan/minitest-activemodel.png)](https://codeclimate.com/github/frodsan/minitest-activemodel)
+[![Gem Version](http://img.shields.io/gem/v/minitest-activemodel.svg)](https://rubygems.org/gems/minitest-activemodel)
+[![Build Status](https://secure.travis-ci.org/frodsan/minitest-activemodel.svg?branch=master)](http://travis-ci.org/frodsan/minitest-activemodel)
+[![Dependency Status](https://gemnasium.com/frodsan/minitest-activemodel.svg)](https://gemnasium.com/frodsan/minitest-activemodel)
+[![Code Climate](https://codeclimate.com/github/frodsan/minitest-activemodel.svg)](https://codeclimate.com/github/frodsan/minitest-activemodel)
 
 MiniTest matchers for `ActiveModel::Validations`.
 
