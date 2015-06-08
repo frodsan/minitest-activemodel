@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.version          = '1.1.0'
 
   gem.authors          = ['Francesco Rodriguez', 'Ryan McGeary']
-  gem.email            = ['lrodriguezsanc@gmail.com', 'ryan@mcgeary.org']
+  gem.email            = ['frodsan@protonmail.ch', 'ryan@mcgeary.org']
   gem.description      = %q{MiniTest matchers for ActiveModel::Validations}
   gem.summary          = gem.description
   gem.homepage         = 'https://github.com/frodsan/minitest-activemodel'
