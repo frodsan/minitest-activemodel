@@ -1,3 +1,9 @@
+# 1.1.0
+
++ Upgrade to minitest 5
++ Add minitest-matchers_vaccine support
++ Add support for Ruby 2.1 and 2.2
+
 # 1.0.0 - February 27, 2013
 
 + Add `validate_exclusion_of` matcher.

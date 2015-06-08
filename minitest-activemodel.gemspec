@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name             = 'minitest-activemodel'
-  gem.version          = '1.0.0'
+  gem.version          = '1.1.0'
 
   gem.authors          = ['Francesco Rodriguez', 'Ryan McGeary']
   gem.email            = ['lrodriguezsanc@gmail.com', 'ryan@mcgeary.org']
