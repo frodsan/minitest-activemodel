@@ -2,7 +2,7 @@ require 'test_helper'
 require 'ar_test_helper'
 require 'models/person'
 
-class ValidateAssociatedMatcherTest < MiniTest::Unit::TestCase
+class ValidateAssociatedMatcherTest < Minitest::Test
   test 'must validate exists association' do
     assert_must validate_associated(:posts), Person
   end

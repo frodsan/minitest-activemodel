@@ -27,9 +27,9 @@ Or install it yourself as:
 
     $ gem install minitest-activemodel
 
-Then, you have to include the matchers into TestCase
+Then, you have to include the matchers into `Minitest::Test`
 
-    class MiniTest::Unit::TestCase
+    class Minitest::Test
       include MiniTest::Matchers::ActiveModel
     end
 

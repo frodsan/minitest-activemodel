@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'models/user'
 
-class ValidateLengthMatcher < MiniTest::Unit::TestCase
+class ValidateLengthMatcher < Minitest::Test
   test 'raises ArgumentError when no option is given' do
     assert_raises(ArgumentError) { assert_must validate_length_of(:name), User }
   end

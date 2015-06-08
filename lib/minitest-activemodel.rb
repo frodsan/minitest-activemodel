@@ -1,4 +1,8 @@
-require 'minitest/matchers'
+begin
+  require 'minitest/matchers_vaccine'
+rescue LoadError
+  require 'minitest/matchers'
+end
 require 'matchers/helpers'
 require 'matchers/validation_matcher'
 require 'matchers/validate_acceptance_matcher'

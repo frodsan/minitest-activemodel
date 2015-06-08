@@ -1,12 +1,19 @@
 language: ruby
-before_install:
-  - gem install bundler
 rvm:
-  - 1.9.3
-  - 2.0.0
+  - 2.1
+  - 2.2
   - ruby-head
   - rbx-19mode
 gemfile:
   - Gemfile
-  - Gemfile.rails4
-  - Gemfile.edge
+  - gemfiles/matchers_vaccine.gemfile
+  - gemfiles/rails-3.2.gemfile
+  - gemfiles/rails-4.2.gemfile
+  - gemfiles/rails-master.gemfile
+matrix:
+  exclude:
+    - rvm: 2.2
+      gemfile: gemfiles/rails-3.2.gemfile
+  allow_failures:
+    - gemfile: gemfiles/rails-master.gemfile
+  fast_finish: true

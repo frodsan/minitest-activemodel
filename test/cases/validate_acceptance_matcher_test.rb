@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'models/user'
 
-class ValidateAcceptanceTest < MiniTest::Unit::TestCase
+class ValidateAcceptanceTest < Minitest::Test
   test 'must validate acceptance of an attribute' do
     assert_must validate_acceptance_of(:eula), User
   end

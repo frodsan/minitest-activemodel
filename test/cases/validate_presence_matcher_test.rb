@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'models/user'
 
-class ValidatePresenceMatcherTest < MiniTest::Unit::TestCase
+class ValidatePresenceMatcherTest < Minitest::Test
   test 'must validate presence of a required attribute' do
     assert_must validate_presence_of(:name), User
   end
